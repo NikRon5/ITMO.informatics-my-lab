@@ -56,14 +56,15 @@
     mkdir encrypted_directory
     touch encrypted_directory/file1.txt encrypted_directory/file2.txt
     ```
+2. Заполните эти файлы какой-либо информацией
 
-2. Заархивируйте и Зашифруйте этот каталог:
+3. Заархивируйте и зашифруйте этот каталог:
 
     ```
     tar czf - encrypted_directory | gpg -e -r 'ваш_имя@пример.com' > encrypted_directory.tar.gz.gpg
     ```
 
-3. Удалите исходный каталог:
+4. Удалите исходный каталог:
 
     ```
     rm -rf encrypted_directory
